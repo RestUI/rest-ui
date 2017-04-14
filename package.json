@@ -1,7 +1,7 @@
 {
   "name": "rest-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Develop faster Admin UIs with the power of React/Redux stack",
   "files": [
     "*.md",
     "docs/*.md",
@@ -10,7 +10,8 @@
   ],
   "main": "lib/index",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "build": "cross-env NODE_ENV=production ./node_modules/.bin/babel ./src -d lib --ignore '*.spec.js'"
   },
   "authors": "RestUI",
   "repository": "RestUI/rest-ui",
@@ -30,6 +31,7 @@
     "babel-preset-react": "~6.16.0",
     "babel-preset-stage-0": "~6.16.0",
     "babel-register": "~6.18.0",
+    "cross-env": "^4.0.0",
     "css-loader": "~0.26.0",
     "enzyme": "~2.6.0",
     "eslint": "~3.11.0",

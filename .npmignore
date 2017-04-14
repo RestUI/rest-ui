@@ -1,0 +1,8 @@
+.idea
+example
+src
+node_modules
+.babelrc
+.eslintrc
+.travis.yml
+README.md
