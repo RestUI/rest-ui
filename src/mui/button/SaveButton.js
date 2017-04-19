@@ -21,22 +21,18 @@ class SaveButton extends Component {
             ? <RaisedButton
                 type="submit"
                 label={label && translate(label)}
-                icon={saving ? <CircularProgress size={25} thickness={2} /> : <ContentSave />}
                 onClick={this.handleClick}
                 primary={!saving}
                 style={{
-                    margin: '10px 24px',
                     position: 'relative',
                 }}
             />
             : <FlatButton
                 type="submit"
                 label={label && translate(label)}
-                icon={saving ? <CircularProgress size={25} thickness={2} /> : <ContentSave />}
                 onClick={this.handleClick}
                 primary={!saving}
                 style={{
-                    margin: '10px 24px',
                     position: 'relative',
                 }}
             />

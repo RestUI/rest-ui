@@ -1,21 +1,34 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
+import { FlatButton, RaisedButton } from 'material-ui';
 import translate from '../../i18n/translate';
-import CancelIcon from 'material-ui/svg-icons/notification/do-not-disturb';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 
-const CancelButton = ({ basePath = '', label = 'aor.action.cancel', raised = true, translate }) => <RaisedButton
-    type="submit"
-    label={label && translate(label)}
-    icon={<CancelIcon/>}
-    containerElement={<Link to={basePath} />}
-    secondary
-    style={{
-        margin: '10px 24px',
-        position: 'relative',
-    }}
-/>;
+class CancelButton extends Component {
+    render() {
+        const { basePath, label = 'aor.action.cancel', raised = true, translate } = this.props;
+        return raised
+            ? <RaisedButton
+                type="submit"
+                label={label && translate(label)}
+                containerElement={<Link to={basePath} />}
+                secondary
+                style={{
+                    margin: '10px',
+                    position: 'relative',
+                }}
+            />
+            : <FlatButton
+                type="submit"
+                label={label && translate(label)}
+                containerElement={<Link to={basePath}/>}
+                secondary
+                style={{
+                    position: 'relative',
+                }}
+            />
+            ;
+    }
+}
 
 CancelButton.propTypes = {
     basePath: PropTypes.string,

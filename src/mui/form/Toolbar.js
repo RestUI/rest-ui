@@ -12,27 +12,34 @@ const styles = {
         justifyContent: 'flex-end',
         zIndex: 2,
     },
+    desktopToolbar: {
+        bottom: 0,
+        width: '100%',
+        backgroundColor: 'white',
+        justifyContent: 'flex-end',
+        zIndex: 2,
+        padding: '1em',
+    },
 };
 
-const Toolbar = ({ invalid, basepath }) => (
+const Toolbar = ({ invalid, basePath }) => (
     <Responsive
         small={
             <MuiToolbar style={styles.mobileToolbar} noGutter>
                 <ToolbarGroup>
+                    <CancelButton raised={false}  basePath={basePath} />
                     <SaveButton invalid={invalid} raised={false} />
-                    <CancelButton raised={false} />
                 </ToolbarGroup>
             </MuiToolbar>
         }
         medium={
-            <MuiToolbar>
+            <MuiToolbar style={styles.desktopToolbar} >
                 <ToolbarGroup>
+                    <CancelButton invalid={invalid} basePath={basePath} />
                     <SaveButton invalid={invalid} />
-                    <CancelButton invalid={invalid} basePath={basepath} />
                 </ToolbarGroup>
             </MuiToolbar>
         }
     />
 );
-
 export default Toolbar;

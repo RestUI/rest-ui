@@ -16,7 +16,7 @@ export const SimpleForm = ({ children, handleSubmit, invalid, record, resource, 
                 </div>
             ))}
         </div>
-        <Toolbar invalid={invalid} />
+        <Toolbar invalid={invalid} basePath={basePath} />
     </form>
 );
 
