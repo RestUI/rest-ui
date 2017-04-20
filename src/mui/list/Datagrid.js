@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
-import DatagridCell from './DatagridCell';
+import { Table, TableHeader, TableRow } from 'material-ui/Table';
 import DatagridHeaderCell from './DatagridHeaderCell';
 import DatagridBody from './DatagridBody';
 
@@ -72,7 +71,8 @@ const defaultStyles = {
 class Datagrid extends Component {
     updateSort = (event) => {
         event.stopPropagation();
-        this.props.setSort(event.currentTarget.dataset.sort);
+
+        this.props.setSort && this.props.setSort(event.currentTarget.dataset.sort);
     }
 
     render() {
