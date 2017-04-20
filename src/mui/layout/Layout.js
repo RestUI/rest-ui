@@ -6,14 +6,11 @@ import autoprefixer from 'material-ui/utils/autoprefixer';
 import CircularProgress from 'material-ui/CircularProgress';
 import withWidth from 'material-ui/utils/withWidth';
 import compose from 'recompose/compose';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import AppBar from './AppBar';
 import Sidebar from './Sidebar';
 import Notification from './Notification';
 import defaultTheme from '../defaultTheme';
 import { setSidebarVisibility as setSidebarVisibilityAction } from '../../actions';
-
-injectTapEventPlugin();
 
 const styles = {
     wrapper: {

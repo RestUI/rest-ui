@@ -16,7 +16,9 @@ module.exports = {
     },
     resolve: {
         alias: {
-            'admin-on-rest': path.join(__dirname, '..', 'src'),
+            'rest-ui': path.join(__dirname, '..', 'src'),
+            'react': path.resolve('./node_modules/react'),
+            'react-native': 'react-native-web'
         },
     },
 };
