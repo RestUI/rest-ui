@@ -17,7 +17,7 @@ import { cyan500, pinkA200 } from 'material-ui/styles/colors';
 
 import defaultTheme from '../defaultTheme';
 import { AUTH_LOGIN } from '../../auth';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const styles = {
     main: {

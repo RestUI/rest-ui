@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import FlatButton from 'material-ui/FlatButton';
 import ActionList from 'material-ui/svg-icons/action/list';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const ListButton = ({ basePath = '', label = 'aor.action.list', translate }) => <FlatButton
     primary

@@ -7,7 +7,7 @@ import ViewTitle from '../layout/ViewTitle';
 import Title from '../layout/Title';
 import { crudGetOne as crudGetOneAction, crudUpdate as crudUpdateAction } from '../../actions/dataActions';
 import DefaultActions from './EditActions';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 /**
  * Turns a children data structure (either single child or array of children) into an array.

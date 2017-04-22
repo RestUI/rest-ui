@@ -3,7 +3,7 @@ import inflection from 'inflection';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 
-import translate from '../i18n/translate';
+import { translate } from '../i18n';
 
 const FieldTitle = ({ resource, source, label, translate }) => (
     <span>

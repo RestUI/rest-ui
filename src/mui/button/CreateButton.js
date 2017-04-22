@@ -6,7 +6,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import withWidth from 'material-ui/utils/withWidth';
 import compose from 'recompose/compose';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const styles = {
     floating: {

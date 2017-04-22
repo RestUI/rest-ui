@@ -6,7 +6,7 @@ import { Tabs, Tab } from 'material-ui/Tabs';
 import { getFieldConstraints, getErrorsForForm, getErrorsForFieldConstraints } from '../../util/validate';
 import Toolbar from './Toolbar';
 import getDefaultValues from '../form/getDefaultValues';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 /**
  * Validator function for redux-form

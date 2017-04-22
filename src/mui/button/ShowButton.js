@@ -5,7 +5,7 @@ import compose from 'recompose/compose';
 import FlatButton from 'material-ui/FlatButton';
 import ImageEye from 'material-ui/svg-icons/image/remove-red-eye';
 import linkToRecord from '../../util/linkToRecord';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const ShowButton = ({ basePath = '', label = 'aor.action.show', record = {}, translate }) => <FlatButton
     primary

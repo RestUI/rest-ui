@@ -5,10 +5,9 @@ import compose from 'recompose/compose';
 import inflection from 'inflection';
 import ViewTitle from '../layout/ViewTitle';
 import Title from '../layout/Title';
-import { DeleteButton, EditButton, ListButton } from '../button';
 import { crudGetOne as crudGetOneAction } from '../../actions/dataActions';
 import DefaultActions from './ShowActions';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 /**
  * Turns a children data structure (either single child or array of children) into an array.

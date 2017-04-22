@@ -5,7 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import ActionHide from 'material-ui/svg-icons/action/highlight-off';
 import compose from 'recompose/compose';
 
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const styles = {
     card: { marginTop: '-14px', paddingTop: 0, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexWrap: 'wrap' },

@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Snackbar from 'material-ui/Snackbar';
-import { hideNotification as hideNotificationAction } from '../../actions/notificationActions' ;
-import translate from '../../i18n/translate';
+import { hideNotification as hideNotificationAction } from '../../actions/notificationActions';
+import { translate } from '../../i18n';
 
 function getStyles(context) {
     if (!context) return { primary1Color: '#00bcd4', accent1Color: '#ff4081' };

@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 import DashboardMenuItem from './DashboardMenuItem';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const styles = {
     main: {

@@ -11,7 +11,7 @@ import ViewTitle from '../layout/ViewTitle';
 import Title from '../layout/Title';
 import { ListButton } from '../button';
 import { crudGetOne as crudGetOneAction, crudDelete as crudDeleteAction } from '../../actions/dataActions';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const styles = {
     actions: { zIndex: 2, display: 'inline-block', float: 'right' },

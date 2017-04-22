@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TranslationProvider from '../../i18n/TranslationProvider';
+import { TranslationProvider } from '../../i18n';
 import FilterForm from './FilterForm';
 import TextInput from '../input/TextInput';
 

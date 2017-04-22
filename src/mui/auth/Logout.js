@@ -6,7 +6,7 @@ import compose from 'recompose/compose';
 import MenuItem from 'material-ui/MenuItem';
 import ExitIcon from 'material-ui/svg-icons/action/power-settings-new';
 
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 import { AUTH_LOGOUT } from '../../auth';
 
 class Logout extends Component {

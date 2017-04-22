@@ -7,7 +7,7 @@ import ViewTitle from '../layout/ViewTitle';
 import Title from '../layout/Title';
 import { crudCreate as crudCreateAction } from '../../actions/dataActions';
 import DefaultActions from './CreateActions';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 class Create extends Component {
     getBasePath() {

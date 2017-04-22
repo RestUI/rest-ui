@@ -2,9 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import ContentSave from 'material-ui/svg-icons/content/save';
-import CircularProgress from 'material-ui/CircularProgress';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 class SaveButton extends Component {
 

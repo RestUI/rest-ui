@@ -5,7 +5,7 @@ import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import ContentFilter from 'material-ui/svg-icons/content/filter-list';
 import FieldTitle from '../../util/FieldTitle';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 export class FilterButton extends Component {
     constructor(props) {

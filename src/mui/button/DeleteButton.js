@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import FlatButton from 'material-ui/FlatButton';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import linkToRecord from '../../util/linkToRecord';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const DeleteButton = ({ basePath = '', label = 'aor.action.delete', record = {}, translate }) => <FlatButton
     secondary

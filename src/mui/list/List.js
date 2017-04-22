@@ -13,7 +13,7 @@ import DefaultPagination from './Pagination';
 import DefaultActions from './Actions';
 import { crudGetList as crudGetListAction } from '../../actions/dataActions';
 import { changeListParams as changeListParamsAction } from '../../actions/listActions';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const filterFormName = 'filterForm';
 

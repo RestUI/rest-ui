@@ -5,10 +5,10 @@ import IconButton from 'material-ui/IconButton';
 import ChevronLeft from 'material-ui/svg-icons/navigation/chevron-left';
 import ChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
-import { cyan500 } from 'material-ui/styles/colors'
+import { cyan500 } from 'material-ui/styles/colors';
 import compose from 'recompose/compose';
 import withWidth from 'material-ui/utils/withWidth';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const styles = {
     button: {

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import onlyUpdateForKeys from 'recompose/onlyUpdateForKeys';
 import compose from 'recompose/compose';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const Title = ({ defaultTitle, record, title, translate }) => {
     if (!title) {

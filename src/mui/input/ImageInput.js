@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Dropzone from 'react-dropzone';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const defaultStyle = {
     dropZone: {

@@ -5,7 +5,7 @@ import compose from 'recompose/compose';
 import FlatButton from 'material-ui/FlatButton';
 import ContentCreate from 'material-ui/svg-icons/content/create';
 import linkToRecord from '../../util/linkToRecord';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 const EditButton = ({ basePath = '', label = 'aor.action.edit', record = {}, translate }) => <FlatButton
     primary

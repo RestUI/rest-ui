@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import SelectInput from './SelectInput';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 
 export const NullableBooleanInput = ({ input, meta: { touched, error }, label, source, elStyle, resource, translate }) => (
     <SelectInput

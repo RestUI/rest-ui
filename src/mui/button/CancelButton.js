@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { FlatButton, RaisedButton } from 'material-ui';
-import translate from '../../i18n/translate';
+import { translate } from '../../i18n';
 import { Link } from 'react-router';
 
 class CancelButton extends Component {
