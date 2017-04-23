@@ -12,7 +12,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production ./node_modules/.bin/babel ./src -d lib --ignore '*.spec.js'",
     "build:example": "cd example && yarn build",
-    "start:example": "yarn build:example && serve example",
+    "start:example": "yarn build && yarn build:example && serve example",
     "start": "serve example",
     "test": "make test"
   },
@@ -70,7 +70,6 @@
     "react-redux": "^5.0.0",
     "react-router": "^3.0.0",
     "react-router-redux": "~4.0.6",
-    "react-tap-event-plugin": "^2.0.0",
     "recompose": "^0.21.2",
     "redux": "^3.6.0",
     "redux-form": "^6.2.0",

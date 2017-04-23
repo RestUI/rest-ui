@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React  from 'react';
 import { func, string, node, array, object, oneOfType } from 'prop-types';
 import { Provider } from 'react-redux';
 import { Router, IndexRoute, Route, Redirect, browserHistory } from 'react-router';
@@ -20,16 +20,16 @@ const Admin = ({
     appLayout,
     authClient,
     children,
-    customReducers = {},
-    customSagas = [],
+    customReducers,
+    customSagas,
     customRoutes,
     dashboard,
     locale,
-    messages = {},
     menu,
+    messages,
     restClient,
     theme,
-    title = 'REST UI',
+    title,
     loginPage,
     logoutButton,
 }) => {
@@ -40,10 +40,10 @@ const Admin = ({
     const store = configureStore({ reducer, restClient, customSagas });
     const onEnter = createOnEnter(authClient);
 
-    const LoginPage = withProps({ title, theme, authClient })(loginPage || Login);
-    const LogoutButton = withProps({ authClient })(logoutButton || Logout);
-    const MenuComponent = withProps({ authClient, logout: <LogoutButton />, resources, hasDashboard: !!dashboard })(menu || Menu);
-    const Layout = withProps({ authClient, logout: <LogoutButton />, menu: <MenuComponent />, title, theme })(appLayout || DefaultLayout);
+    const LoginPage = withProps({ title, theme, authClient })(loginPage);
+    const LogoutButton = withProps({ authClient })(logoutButton);
+    const MenuComponent = withProps({ authClient, logout: <LogoutButton />, resources, hasDashboard: !!dashboard })(menu);
+    const Layout = withProps({ authClient, logout: <LogoutButton />, menu: <MenuComponent />, title, theme })(appLayout);
 
     return (
         <Provider store={store}>
@@ -91,3 +91,16 @@ Admin.propTypes = {
     locale: string,
     messages: object,
 };
+
+Admin.defaultProps = {
+    appLayout: DefaultLayout,
+    menu: Menu,
+    customReducers: {},
+    customSagas: [],
+    messages: {},
+    title: 'REST UI',
+    loginPage: Login,
+    logoutButton: Logout,
+};
+
+export default Admin;

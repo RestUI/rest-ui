@@ -7,6 +7,8 @@ import jsonRestClient from 'aor-json-rest-client';
 import { Delete } from 'rest-ui/mui';
 import frenchMessages from 'aor-language-french';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import addUploadFeature from './addUploadFeature';
 
 import { PostList, PostCreate, PostEdit, PostShow, PostIcon } from './posts';
@@ -14,6 +16,8 @@ import { CommentList, CommentEdit, CommentCreate, CommentIcon } from './comments
 
 import data from './data';
 import * as customMessages from './i18n';
+
+injectTapEventPlugin();
 
 const messages = {
     fr: { ...frenchMessages, ...customMessages.fr },
