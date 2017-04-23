@@ -7,6 +7,7 @@ import { Link } from 'react-router';
 class CancelButton extends Component {
     render() {
         const { basePath, label = 'aor.action.cancel', raised = true, translate } = this.props;
+
         return raised
             ? <RaisedButton
                 type="submit"

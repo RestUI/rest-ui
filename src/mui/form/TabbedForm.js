@@ -40,6 +40,7 @@ export class TabbedForm extends Component {
 
     render() {
         const { children, contentContainerStyle, handleSubmit, invalid, record, resource, basePath, translate } = this.props;
+
         return (
             <form onSubmit={handleSubmit}>
                 <div style={{ padding: '0 1em 1em 1em' }}>
@@ -51,7 +52,7 @@ export class TabbedForm extends Component {
                         )}
                     </Tabs>
                 </div>
-                <Toolbar invalid={invalid} />
+                <Toolbar invalid={invalid} basePath={basePath}/>
             </form>
         );
     }

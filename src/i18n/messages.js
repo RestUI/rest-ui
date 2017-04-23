@@ -8,7 +8,6 @@ export default {
             cancel: 'Cancel',
             create: 'Create',
             edit: 'Edit',
-            cancel: 'Cancel',
             refresh: 'Refresh',
             add_filter: 'Add filter',
             remove_filter: 'Remove this filter',

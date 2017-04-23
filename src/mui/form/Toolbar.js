@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Toolbar as MuiToolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import Responsive from '../layout/Responsive';
 import { SaveButton, CancelButton } from '../button';
@@ -27,7 +28,7 @@ const Toolbar = ({ invalid, basePath }) => (
         small={
             <MuiToolbar style={styles.mobileToolbar} noGutter>
                 <ToolbarGroup>
-                    <CancelButton raised={false}  basePath={basePath} />
+                    <CancelButton raised={false} basePath={basePath} />
                     <SaveButton invalid={invalid} raised={false} />
                 </ToolbarGroup>
             </MuiToolbar>
@@ -42,4 +43,10 @@ const Toolbar = ({ invalid, basePath }) => (
         }
     />
 );
+
+Toolbar.propTypes = {
+    basePath: PropTypes.string.isRequired,
+    invalid: PropTypes.bool,
+};
+
 export default Toolbar;

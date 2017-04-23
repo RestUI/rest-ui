@@ -8,9 +8,9 @@ import ui from './ui';
 
 export default (resources) => {
     const resourceReducers = {};
-    resources.forEach((resource) => {
-        resourceReducers[resource.name] = resourceReducer(resource.name, resource.options);
-    });
+
+    resources.forEach(({ name, options }) => resourceReducers[name] = resourceReducer(name, options));
+
     return combineReducers({
         ...resourceReducers,
         loading,
