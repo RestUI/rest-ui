@@ -14,7 +14,8 @@
     "build:example": "cd example && yarn build",
     "start:example": "yarn build && yarn build:example && serve example",
     "start": "serve example",
-    "test": "make test"
+    "test": "mocha './src/**/*.spec.js' --compilers js:babel-register --require babel-polyfill",
+    "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha"
   },
   "authors": "RestUI",
   "repository": "RestUI/rest-ui",
@@ -34,6 +35,7 @@
     "babel-preset-react": "~6.16.0",
     "babel-preset-stage-0": "~6.16.0",
     "babel-register": "~6.18.0",
+    "coveralls": "^2.13.0",
     "cross-env": "^4.0.0",
     "css-loader": "~0.26.0",
     "enzyme": "~2.6.0",
@@ -45,10 +47,11 @@
     "extract-text-webpack-plugin": "~1.0.1",
     "full-icu": "~1.0.3",
     "ignore-styles": "~5.0.1",
+    "isparta": "^4.0.0",
     "mocha": "~3.2.0",
     "react-addons-test-utils": "~15.4.0",
     "serve": "^5.1.4",
-    "sinon": "~1.17.6",
+    "sinon": "^2.1.0",
     "style-loader": "~0.13.1",
     "webpack": "~1.13.2",
     "webpack-dev-server": "~1.16.2"
