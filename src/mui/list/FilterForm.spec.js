@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { TranslationProvider } from '../../i18n';
+import { TranslationProvider, englishMessages } from '../../i18n';
 import FilterForm from './FilterForm';
 import TextInput from '../input/TextInput';
 
@@ -39,7 +39,7 @@ describe('<FilterForm />', () => {
         const muiTheme = getMuiTheme({ userAgent: false });
         const wrapper = render(
             <Provider store={store}>
-                <TranslationProvider>
+                <TranslationProvider locale="en" messages={{ en: englishMessages }}>
                     <MuiThemeProvider muiTheme={muiTheme}>
                         <FilterForm
                             {...defaultProps}
