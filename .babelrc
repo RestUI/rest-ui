@@ -1,6 +1,7 @@
 {
-    "presets": ["es2015", "stage-0", "react"],
+    "presets": ["es2015", "stage-0", "react", "env"],
     "plugins": [
+        "transform-class-properties",
         "transform-react-jsx",
         "add-module-exports",
         ["babel-plugin-transform-builtin-extend", {
