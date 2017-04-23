@@ -6,7 +6,7 @@ import {
     DELETE,
     GET_MANY,
     GET_MANY_REFERENCE,
-} from '../rest/types';
+} from '../../rest/types';
 
 export const CRUD_GET_LIST = 'CRUD_GET_LIST';
 export const CRUD_GET_LIST_LOADING = 'CRUD_GET_LIST_LOADING';

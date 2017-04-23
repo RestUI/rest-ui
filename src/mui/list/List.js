@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { push as pushAction } from 'react-router-redux';
 import { Card } from 'material-ui/Card';
@@ -6,13 +7,13 @@ import compose from 'recompose/compose';
 import inflection from 'inflection';
 import { change as changeFormValueAction, getFormValues } from 'redux-form';
 import debounce from 'lodash.debounce';
-import queryReducer, { SET_SORT, SET_PAGE, SET_FILTER, SORT_DESC } from '../../reducer/resource/list/queryReducer';
+import queryReducer, { SET_SORT, SET_PAGE, SET_FILTER, SORT_DESC } from '../../redux/reducer/resource/list/queryReducer';
 import ViewTitle from '../layout/ViewTitle';
 import Title from '../layout/Title';
 import DefaultPagination from './Pagination';
 import DefaultActions from './Actions';
-import { crudGetList as crudGetListAction } from '../../actions/dataActions';
-import { changeListParams as changeListParamsAction } from '../../actions/listActions';
+import { crudGetList as crudGetListAction } from '../../redux/actions/dataActions';
+import { changeListParams as changeListParamsAction } from '../../redux/actions/listActions';
 import { translate } from '../../i18n';
 
 const filterFormName = 'filterForm';

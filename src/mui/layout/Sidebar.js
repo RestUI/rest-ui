@@ -1,9 +1,10 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Drawer from 'material-ui/Drawer';
 import Paper from 'material-ui/Paper';
 import Responsive from './Responsive';
-import { setSidebarVisibility as setSidebarVisibilityAction } from '../../actions';
+import { setSidebarVisibility as setSidebarVisibilityAction } from '../../redux/actions';
 
 const styles = {
     sidebarOpen: {

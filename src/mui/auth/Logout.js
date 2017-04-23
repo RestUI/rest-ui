@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { push as pushAction } from 'react-router-redux';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';

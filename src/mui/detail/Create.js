@@ -1,11 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, CardTitle } from 'material-ui/Card';
 import compose from 'recompose/compose';
 import inflection from 'inflection';
 import ViewTitle from '../layout/ViewTitle';
 import Title from '../layout/Title';
-import { crudCreate as crudCreateAction } from '../../actions/dataActions';
+import { crudCreate as crudCreateAction } from '../../redux/actions/dataActions';
 import DefaultActions from './CreateActions';
 import { translate } from '../../i18n';
 

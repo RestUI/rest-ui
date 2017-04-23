@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { FlatButton, RaisedButton } from 'material-ui';
 import { translate } from '../../i18n';
 import { Link } from 'react-router';

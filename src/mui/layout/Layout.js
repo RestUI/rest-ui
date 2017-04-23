@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -10,7 +11,7 @@ import AppBar from './AppBar';
 import Sidebar from './Sidebar';
 import Notification from './Notification';
 import defaultTheme from '../defaultTheme';
-import { setSidebarVisibility as setSidebarVisibilityAction } from '../../actions';
+import { setSidebarVisibility as setSidebarVisibilityAction } from '../../redux/actions';
 
 const styles = {
     wrapper: {

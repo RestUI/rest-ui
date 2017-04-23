@@ -13,7 +13,7 @@ import {
     CRUD_UPDATE_SUCCESS,
 } from '../../actions/dataActions';
 import { showNotification } from '../../actions/notificationActions';
-import linkToRecord from '../../util/linkToRecord';
+import linkToRecord from '../../../util/linkToRecord';
 
 /**
  * Side effects for fetch responses

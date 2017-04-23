@@ -1,6 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Card, CardTitle, CardText, CardActions } from 'material-ui/Card';
+import { browserHistory } from 'react-router';
+import { Card, CardText, CardActions } from 'material-ui/Card';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import ActionCheck from 'material-ui/svg-icons/action/check-circle';
@@ -10,7 +12,7 @@ import inflection from 'inflection';
 import ViewTitle from '../layout/ViewTitle';
 import Title from '../layout/Title';
 import { ListButton } from '../button';
-import { crudGetOne as crudGetOneAction, crudDelete as crudDeleteAction } from '../../actions/dataActions';
+import { crudGetOne as crudGetOneAction, crudDelete as crudDeleteAction } from '../../redux/actions/dataActions';
 import { translate } from '../../i18n';
 
 const styles = {
@@ -47,7 +49,7 @@ class Delete extends Component {
     }
 
     goBack() {
-        this.props.history.goBack();
+        browserHistory.goBack();
     }
 
     render() {
@@ -104,7 +106,6 @@ Delete.propTypes = {
     resource: PropTypes.string.isRequired,
     location: PropTypes.object.isRequired,
     params: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired,
     data: PropTypes.object,
     isLoading: PropTypes.bool.isRequired,
     crudGetOne: PropTypes.func.isRequired,
@@ -123,7 +124,7 @@ function mapStateToProps(state, props) {
 const enhance = compose(
     connect(
         mapStateToProps,
-        { crudGetOne: crudGetOneAction, crudDelete: crudDeleteAction }
+        { crudGetOne: crudGetOneAction, crudDelete: crudDeleteAction },
     ),
     translate,
 );

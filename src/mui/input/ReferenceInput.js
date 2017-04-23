@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import debounce from 'lodash.debounce';
 import Labeled from './Labeled';
-import { crudGetOne as crudGetOneAction, crudGetMatching as crudGetMatchingAction } from '../../actions/dataActions';
-import { getPossibleReferences } from '../../reducer/references/possibleValues';
+import { crudGetOne as crudGetOneAction, crudGetMatching as crudGetMatchingAction } from '../../redux/actions/dataActions';
+import { getPossibleReferences } from '../../redux/reducer/references/possibleValues';
 
 const referenceSource = (resource, source) => `${resource}@${source}`;
 const noFilter = () => true;

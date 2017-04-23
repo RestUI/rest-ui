@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import LinearProgress from 'material-ui/LinearProgress';
-import { crudGetManyReference as crudGetManyReferenceAction } from '../../actions/dataActions';
-import { getIds, getReferences, nameRelatedTo } from '../../reducer/references/oneToMany';
+import { crudGetManyReference as crudGetManyReferenceAction } from '../../redux/actions/dataActions';
+import { getIds, getReferences, nameRelatedTo } from '../../redux/reducer/references/oneToMany';
 
 /**
  * Render related records to the current one.

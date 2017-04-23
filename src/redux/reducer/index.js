@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import resourceReducer from './resource';
+import resourceReducer from './resource/index';
 import loading from './loading';
 import notification from './notification';
-import references from './references';
+import references from './references/index';
 import saving from './saving';
 import ui from './ui';
 

@@ -1,11 +1,11 @@
-export * from './actions';
+export * from './redux/actions';
 export * from './auth';
 export * from './i18n';
-export adminReducer from './reducer';
-export localeReducer from './reducer/locale';
-export queryReducer from './reducer/resource/list/queryReducer';
+export adminReducer from './redux/reducer';
+export localeReducer from './redux/reducer/locale';
+export queryReducer from './redux/reducer/resource/list/queryReducer';
 export * from './rest';
-export * from './sideEffect/saga';
+export * from './redux/sideEffect/saga';
 export * as fetchUtils from './util/fetch';
 export FieldTitle from './util/FieldTitle';
 export Admin from './Admin';

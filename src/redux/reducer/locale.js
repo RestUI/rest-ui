@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE } from '../i18n/index';
+import { DEFAULT_LOCALE } from '../../i18n/index';
 import { CHANGE_LOCALE } from '../actions/localeActions';
 
 export default (initialLocale = DEFAULT_LOCALE) => (
