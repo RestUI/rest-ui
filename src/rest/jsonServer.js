@@ -9,6 +9,8 @@ import {
     DELETE,
 } from './types';
 
+const parseResponse = (type, json) => type === CREATE ? json.id : json;
+
 /**
  * Maps admin-on-rest queries to a json-server powered REST API
  *
@@ -21,7 +23,7 @@ import {
  * CREATE       => POST http://my.api.url/posts/123
  * DELETE       => DELETE http://my.api.url/posts/123
  */
-export default (apiUrl, httpClient = fetchJson) => {
+export default (apiUrl, httpClient = fetchJson, parse = parseResponse) => {
     /**
      * @param {String} type One of the constants appearing at the top if this file, e.g. 'UPDATE'
      * @param {String} resource Name of the resource to fetch, e.g. 'posts'
@@ -98,13 +100,13 @@ export default (apiUrl, httpClient = fetchJson) => {
                 throw new Error('The X-Total-Count header is missing in the HTTP Response. The jsonServer REST client expects responses for lists of resources to contain this header with the total number of results to build the pagination. If you are using CORS, did you declare X-Total-Count in the Access-Control-Expose-Headers header?');
             }
             return {
-                data: json,
+                data: parse(type, json),
                 total: parseInt(headers.get('x-total-count').split('/').pop(), 10),
             };
         case CREATE:
-            return { data: { ...params.data, id: json.id } };
+            return { data: { ...params.data, id: parse(type, json) } };
         default:
-            return { data: json };
+            return { data: parse(type, json) };
         }
     };
 
@@ -118,7 +120,7 @@ export default (apiUrl, httpClient = fetchJson) => {
         // json-server doesn't handle WHERE IN requests, so we fallback to calling GET_ONE n times instead
         if (type === GET_MANY) {
             return Promise.all(params.ids.map(id => httpClient(`${apiUrl}/${resource}/${id}`)))
-                .then(responses => ({ data: responses.map(response => response.json) }));
+                .then(responses => ({ data: responses.map(({ json }) => parse(type, json)) }));
         }
         const { url, options } = convertRESTRequestToHTTP(type, resource, params);
         return httpClient(url, options)
